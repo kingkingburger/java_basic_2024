@@ -1,0 +1,37 @@
+package method.ex;
+
+public class MehotdEx3 {
+    public static void main(String[] args) {
+        int balance = 10000;
+        // 입금 1000
+        int depositAmount = 1000;
+        balance += depositAmount;
+        // 출금 2000
+        int withdrawAmount = 2000;
+        if (balance >= withdrawAmount) {
+            balance -= withdrawAmount;
+            System.out.println(withdrawAmount + "원을 출금하였습니다. 현재 잔액: " +
+                    balance + "원");
+        } else {
+            System.out.println(withdrawAmount + "원을 출금하려 했으나 잔액이 부족합니다.");
+        }
+
+        System.out.println("최종 잔액: " + balance + "원");
+    }
+
+    public static int deposit(int balance, int count){
+        balance += count;
+        System.out.println(count + "원을 입금하였습니다. 현재 잔액: " + balance + "원");
+        return balance;
+    }
+
+    public static int withdraw(int balance, int count){
+        if (balance >= count) {
+            balance -= count;
+            System.out.println(count + "원을 출금하였습니다. 현재 잔액: " +
+                    balance + "원");
+        } else {
+            System.out.println(count + "원을 출금하려 했으나 잔액이 부족합니다.");
+        }
+    }
+}
