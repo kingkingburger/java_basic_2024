@@ -33,5 +33,6 @@ public class MehotdEx3 {
         } else {
             System.out.println(count + "원을 출금하려 했으나 잔액이 부족합니다.");
         }
+        return balance;
     }
 }
